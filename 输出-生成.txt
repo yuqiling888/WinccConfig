@@ -1,0 +1,8 @@
+﻿已启动重新生成…
+1>------ 已启动全部重新生成: 项目: Models, 配置: Debug Any CPU ------
+1>  Models -> D:\Ussra\实项\Models\bin\Debug\Models.dll
+2>------ 已启动全部重新生成: 项目: DAL, 配置: Debug Any CPU ------
+2>  DAL -> D:\Ussra\实项\DAL\bin\Debug\DAL.dll
+3>------ 已启动全部重新生成: 项目: StudentGuanli, 配置: Debug x86 ------
+3>  StudentGuanli -> D:\Ussra\实项\WFDemo\bin\Debug\WindowsApplication.exe
+========== 全部重新生成: 成功 3 个，失败 0 个，跳过 0 个 ==========
