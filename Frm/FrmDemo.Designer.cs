@@ -1,5 +1,5 @@
 ﻿
-namespace StudentManager
+namespace StudentGuanli
 {
     partial class FrmDemo
     {
@@ -29,6 +29,7 @@ namespace StudentManager
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.lblCurretUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.btnAddStudent = new System.Windows.Forms.Button();
@@ -40,22 +41,23 @@ namespace StudentManager
             this.btnAttendanceCheck = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnAccountSwitch = new System.Windows.Forms.Button();
-            this.系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.学员管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiAddStudent = new System.Windows.Forms.ToolStripMenuItem();
-            this.tsmiStudentManage = new System.Windows.Forms.ToolStripMenuItem();
-            this.成绩管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.考勤管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.splitContainer3 = new System.Windows.Forms.SplitContainer();
             this.label2 = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.tsmiAddStudent = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiStudentManage = new System.Windows.Forms.ToolStripMenuItem();
+            this.学员管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.成绩管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.考勤管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.SuspendLayout();
@@ -171,53 +173,6 @@ namespace StudentManager
             this.btnAccountSwitch.UseVisualStyleBackColor = true;
             this.btnAccountSwitch.Click += new System.EventHandler(this.btnAccountSwitch_Click);
             // 
-            // 系统ToolStripMenuItem
-            // 
-            this.系统ToolStripMenuItem.Name = "系统ToolStripMenuItem";
-            this.系统ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.系统ToolStripMenuItem.Text = "系统";
-            // 
-            // 学员管理ToolStripMenuItem
-            // 
-            this.学员管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiAddStudent,
-            this.tsmiStudentManage});
-            this.学员管理ToolStripMenuItem.Name = "学员管理ToolStripMenuItem";
-            this.学员管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.学员管理ToolStripMenuItem.Text = "学员管理";
-            // 
-            // tsmiAddStudent
-            // 
-            this.tsmiAddStudent.Name = "tsmiAddStudent";
-            this.tsmiAddStudent.Size = new System.Drawing.Size(180, 22);
-            this.tsmiAddStudent.Text = "添加学生";
-            this.tsmiAddStudent.Click += new System.EventHandler(this.tsmiAddStudent_Click);
-            // 
-            // tsmiStudentManage
-            // 
-            this.tsmiStudentManage.Name = "tsmiStudentManage";
-            this.tsmiStudentManage.Size = new System.Drawing.Size(180, 22);
-            this.tsmiStudentManage.Text = "学员管理";
-            this.tsmiStudentManage.Click += new System.EventHandler(this.tsmiStudentManage_Click);
-            // 
-            // 成绩管理ToolStripMenuItem
-            // 
-            this.成绩管理ToolStripMenuItem.Name = "成绩管理ToolStripMenuItem";
-            this.成绩管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.成绩管理ToolStripMenuItem.Text = "成绩管理";
-            // 
-            // 考勤管理ToolStripMenuItem
-            // 
-            this.考勤管理ToolStripMenuItem.Name = "考勤管理ToolStripMenuItem";
-            this.考勤管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.考勤管理ToolStripMenuItem.Text = "考勤管理";
-            // 
-            // 帮助ToolStripMenuItem
-            // 
-            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
-            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
-            this.帮助ToolStripMenuItem.Text = "帮助";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -262,7 +217,8 @@ namespace StudentManager
             // 
             // splitContainer1
             // 
-            this.splitContainer1.Location = new System.Drawing.Point(22, 28);
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 25);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -284,9 +240,28 @@ namespace StudentManager
             this.splitContainer1.Panel1.Controls.Add(this.btnAttendanceManage);
             this.splitContainer1.Panel1.Controls.Add(this.btnAttendanceCheck);
             this.splitContainer1.Panel1.Controls.Add(this.btnScoreBrowse);
-            this.splitContainer1.Size = new System.Drawing.Size(1267, 659);
-            this.splitContainer1.SplitterDistance = 467;
+            this.splitContainer1.Size = new System.Drawing.Size(1320, 695);
+            this.splitContainer1.SplitterDistance = 289;
+            this.splitContainer1.SplitterWidth = 10;
             this.splitContainer1.TabIndex = 18;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(14, 498);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "访问官网";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(114, 498);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "退出系统";
+            this.button4.UseVisualStyleBackColor = true;
             // 
             // button1
             // 
@@ -306,23 +281,57 @@ namespace StudentManager
             this.button2.Text = "批量导入";
             this.button2.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // contextMenuStrip1
             // 
-            this.button3.Location = new System.Drawing.Point(14, 498);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "访问官网";
-            this.button3.UseVisualStyleBackColor = true;
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // button4
+            // tsmiAddStudent
             // 
-            this.button4.Location = new System.Drawing.Point(114, 498);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "退出系统";
-            this.button4.UseVisualStyleBackColor = true;
+            this.tsmiAddStudent.Name = "tsmiAddStudent";
+            this.tsmiAddStudent.Size = new System.Drawing.Size(180, 22);
+            this.tsmiAddStudent.Text = "添加学生";
+            this.tsmiAddStudent.Click += new System.EventHandler(this.tsmiAddStudent_Click);
+            // 
+            // tsmiStudentManage
+            // 
+            this.tsmiStudentManage.Name = "tsmiStudentManage";
+            this.tsmiStudentManage.Size = new System.Drawing.Size(180, 22);
+            this.tsmiStudentManage.Text = "学员管理";
+            this.tsmiStudentManage.Click += new System.EventHandler(this.tsmiStudentManage_Click);
+            // 
+            // 学员管理ToolStripMenuItem
+            // 
+            this.学员管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiAddStudent,
+            this.tsmiStudentManage});
+            this.学员管理ToolStripMenuItem.Name = "学员管理ToolStripMenuItem";
+            this.学员管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.学员管理ToolStripMenuItem.Text = "学员管理";
+            // 
+            // 成绩管理ToolStripMenuItem
+            // 
+            this.成绩管理ToolStripMenuItem.Name = "成绩管理ToolStripMenuItem";
+            this.成绩管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.成绩管理ToolStripMenuItem.Text = "成绩管理";
+            // 
+            // 考勤管理ToolStripMenuItem
+            // 
+            this.考勤管理ToolStripMenuItem.Name = "考勤管理ToolStripMenuItem";
+            this.考勤管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.考勤管理ToolStripMenuItem.Text = "考勤管理";
+            // 
+            // 帮助ToolStripMenuItem
+            // 
+            this.帮助ToolStripMenuItem.Name = "帮助ToolStripMenuItem";
+            this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.帮助ToolStripMenuItem.Text = "帮助";
+            // 
+            // 系统ToolStripMenuItem
+            // 
+            this.系统ToolStripMenuItem.Name = "系统ToolStripMenuItem";
+            this.系统ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.系统ToolStripMenuItem.Text = "系统";
             // 
             // FrmDemo
             // 
@@ -361,22 +370,23 @@ namespace StudentManager
         private System.Windows.Forms.Button btnAttendanceCheck;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Button btnAccountSwitch;
-        private System.Windows.Forms.ToolStripMenuItem 系统ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 学员管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 成绩管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 考勤管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblVersion;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.ToolStripMenuItem tsmiAddStudent;
-        private System.Windows.Forms.ToolStripMenuItem tsmiStudentManage;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 系统ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 学员管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAddStudent;
+        private System.Windows.Forms.ToolStripMenuItem tsmiStudentManage;
+        private System.Windows.Forms.ToolStripMenuItem 成绩管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 考勤管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
     }
 }
 

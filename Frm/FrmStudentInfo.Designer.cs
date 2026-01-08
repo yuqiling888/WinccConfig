@@ -1,5 +1,5 @@
 ﻿
-namespace StudentManager
+namespace StudentGuanli
 {
     partial class FrmStudentInfo
     {
@@ -47,6 +47,9 @@ namespace StudentManager
             this.labelFamliyAddress = new System.Windows.Forms.Label();
             this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
             this.labelPhoneNumber = new System.Windows.Forms.Label();
+            this.pcbStuImage = new System.Windows.Forms.PictureBox();
+            this.btnClose = new System.Windows.Forms.Button();
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStuImage)).BeginInit();
             this.SuspendLayout();
             // 
             // labelStudentName
@@ -198,13 +201,33 @@ namespace StudentManager
             this.labelPhoneNumber.TabIndex = 13;
             this.labelPhoneNumber.Text = "联系电话：";
             // 
+            // pcbStuImage
+            // 
+            this.pcbStuImage.Location = new System.Drawing.Point(517, 48);
+            this.pcbStuImage.Name = "pcbStuImage";
+            this.pcbStuImage.Size = new System.Drawing.Size(261, 299);
+            this.pcbStuImage.TabIndex = 17;
+            this.pcbStuImage.TabStop = false;
+            // 
+            // btnClose
+            // 
+            this.btnClose.Location = new System.Drawing.Point(650, 380);
+            this.btnClose.Name = "btnClose";
+            this.btnClose.Size = new System.Drawing.Size(101, 32);
+            this.btnClose.TabIndex = 18;
+            this.btnClose.Text = "关闭窗口";
+            this.btnClose.UseVisualStyleBackColor = true;
+            this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
+            // 
             // FrmStudentInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.AppWorkspace;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ClientSize = new System.Drawing.Size(609, 450);
+            this.ClientSize = new System.Drawing.Size(826, 450);
+            this.Controls.Add(this.btnClose);
+            this.Controls.Add(this.pcbStuImage);
             this.Controls.Add(this.textBoxFamliyAddress);
             this.Controls.Add(this.labelFamliyAddress);
             this.Controls.Add(this.textBoxPhoneNumber);
@@ -225,6 +248,7 @@ namespace StudentManager
             this.Name = "FrmStudentInfo";
             this.Text = "学生详细信息";
             this.Load += new System.EventHandler(this.FrmStudentInfo_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.pcbStuImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -249,5 +273,7 @@ namespace StudentManager
         private System.Windows.Forms.Label labelFamliyAddress;
         private System.Windows.Forms.TextBox textBoxPhoneNumber;
         private System.Windows.Forms.Label labelPhoneNumber;
+        private System.Windows.Forms.PictureBox pcbStuImage;
+        private System.Windows.Forms.Button btnClose;
     }
 }

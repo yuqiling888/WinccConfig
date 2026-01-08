@@ -9,25 +9,24 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 using Models;
-using StudentManager;
+using StudentGuanli;
 
 
-namespace StudentManager
+
+namespace StudentGuanli
 {
     public partial class FrmModifyStudent : Form
     {
         private StudentClassService objStudentClassService = new StudentClassService();
         private StudentService objStudentService = new StudentService();
-        public FrmModifyStudent()
+        public FrmModifyStudent(StudentExt objStudent)
         {
             InitializeComponent();
-            this.cboClassName.DataSource = objStudentClassService.GetAllClasses();
-            this.cboClassName.DisplayMember = "ClassName";
-            this.cboClassName.ValueMember = "ClassId";
-          
-        }
-        public FrmModifyStudent(StudentExt objStudent):this()
-        {
+            this.cboClassName.DataSource = objStudentClassService.GetAllClass();
+            this.cboClassName.DisplayMember = "ClassName";//设置下拉框的显示文本
+            this.cboClassName.ValueMember = "ClassId"; //设置下拉框显示文本对应的Value
+            //显示学生信息
+
             this.textBoxStudentId.Text = objStudent.StudentId.ToString();
             this.textBoxStudetName.Text = objStudent.StudentName;
             this.textBoxStudentIdNo.Text = objStudent.StudentIdNo.ToString();
@@ -38,7 +37,31 @@ namespace StudentManager
             this.textBoxStudentAdderss.Text = objStudent.StudentAddress;
             if (objStudent.Gender == "男") this.rdoMale.Checked = true;
             else this.rdoFeMale.Checked = true;
+
+            //显示照片
+            this.pbStu.Image = objStudent.StuImage.Length != 0 ?
+                (Image)new Common.SerializeObjectToString().DeserializeToObject(objStudent.StuImage) : Image.FromFile("default.png");
+
+
+
         }
+        //public FrmModifyStudent(StudentExt objStudent)
+        //{
+        //    this.textBoxStudentId.Text = objStudent.StudentId.ToString();
+        //    this.textBoxStudetName.Text = objStudent.StudentName;
+        //    this.textBoxStudentIdNo.Text = objStudent.StudentIdNo.ToString();
+        //    this.dtpBirthday.Text = objStudent.Birthday.ToShortDateString();
+        //    this.cboClassName.Text = objStudent.ClassName;
+        //    this.textBoxCardNo.Text = objStudent.CardNo;
+        //    this.textBoxPhoneNumber.Text = objStudent.PhoneNumber.ToString();
+        //    this.textBoxStudentAdderss.Text = objStudent.StudentAddress;
+        //    if (objStudent.Gender == "男") this.rdoMale.Checked = true;
+        //    else this.rdoFeMale.Checked = true;
+
+        //    //显示照片
+        //    this.pbStu.Image = objStudent.StuImage.Length != 0 ?
+        //        (Image)new Common.SerializeObjectToString().DeserializeToObject(objStudent.StuImage) : Image.FromFile("default.png");
+        //}
               
         //提交修改   
 
@@ -78,8 +101,13 @@ namespace StudentManager
                 Age = DateTime.Now.Year - Convert.ToDateTime(this.dtpBirthday.Text).Year,
                 PhoneNumber = this.textBoxPhoneNumber.Text.Trim(),
                 StudentAddress = this.textBoxStudentAdderss.Text.Trim(),
-                ClassId=Convert.ToInt32( this.cboClassName.SelectedValue),
-                
+                ClassId = Convert.ToInt32(this.cboClassName.SelectedValue),
+                //ClassName = this.cboClassName.Text,
+                CardNo = this.textBoxCardNo.Text.Trim(),
+                StuImage = this.pbStu.Image!=null?
+                new Common.SerializeObjectToString().SerializeOboject(this.pbStu.Image):"",
+
+
             };
 
             #endregion
@@ -117,6 +145,25 @@ namespace StudentManager
         {
 
         }
+
+        private void FrmModifyStudent_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        //选择照片
+        private void btnpic_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog objFileDialog = new OpenFileDialog();
+            DialogResult result = objFileDialog.ShowDialog();
+            if(result==DialogResult.OK)
+            {
+                this.pbStu.Image = Image.FromFile(objFileDialog.FileName);
+            }
+
+        }
+
+        
     }
    
 }

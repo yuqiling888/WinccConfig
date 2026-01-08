@@ -10,7 +10,7 @@ using System.Windows.Forms;
 using Models;
 using DAL;
 
-namespace StudentManager
+namespace StudentGuanli
 {
     public partial class FrmStudentInfo : Form
     {
@@ -29,6 +29,9 @@ namespace StudentManager
             this.textBoxCard.Text = objExStudent.CardNo;
             this.textBoxPhoneNumber.Text = objExStudent.PhoneNumber.ToString();
             this.textBoxFamliyAddress.Text = objExStudent.StudentAddress;
+            //显示照片
+            this.pcbStuImage.Image = objExStudent.StuImage.Length!=0?
+                (Image)new Common.SerializeObjectToString().DeserializeToObject(objExStudent.StuImage):Image.FromFile("default.png");
         }
 
 
@@ -37,6 +40,9 @@ namespace StudentManager
 
         }
 
-       
+        private void btnClose_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

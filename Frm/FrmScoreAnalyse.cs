@@ -10,11 +10,11 @@ using System.Windows.Forms;
 using DAL;
 using Models;
 
-namespace StudentManager
+namespace StudentGuanli
 {
     public partial class FrmScoreAnalyse : Form
     {
-   //     private StudentService objSCorece = new StudentService();
+        private StudentService objSCorece = new StudentService();
         public FrmScoreAnalyse()
         {
             InitializeComponent();
@@ -29,7 +29,7 @@ namespace StudentManager
             this.labelScoerCount.Text = "全校考试成绩";
             //查询成绩列表
             this.dataGridViewScoreList.AutoGenerateColumns = false;
-   //         this.dataGridViewScoreList.DataSource = objSCorece.GetScoreList("");
+            this.dataGridViewScoreList.DataSource = objSCorece.GetScoreList("");
 
 
 
@@ -55,6 +55,11 @@ namespace StudentManager
         private void ScoreQueryList_FormClosed_1(object sender, FormClosedEventArgs e)
         {
             FrmDemo.objFrmScoreQueryList = null;
+
+        }
+
+        private void textBoxNumberOfExaminess_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }

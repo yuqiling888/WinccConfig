@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
-using StudentManagermo;
+using StudentGuanli;
 using System.Configuration;
 
 
-namespace StudentManager
+namespace StudentGuanli
 {
     public partial class FrmDemo : Form
     {
@@ -23,7 +23,7 @@ namespace StudentManager
             InitializeComponent();
         //    string connString = DAL.SQLHelper.connString;
             //显示用户名
-            this.lblCurretUser.Text = Program.ObjCurrentAdmin.AdminName+"]";
+            this.lblCurretUser.Text = Program.ObjCurrentAdmin.AdminName +"]";
             //显示主窗体背景
             this.splitContainer1.Panel2.BackgroundImage = Image.FromFile("qigang.png");
             this.splitContainer1.Panel2.BackgroundImageLayout = ImageLayout.Stretch;
@@ -226,6 +226,9 @@ namespace StudentManager
 
         private void btnChangePassword_Click(object sender, EventArgs e)
         {
+            FrmModifyPwd objFrom = new FrmModifyPwd();
+            objFrom.ShowDialog();
+
 
         }
 

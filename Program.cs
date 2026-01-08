@@ -7,7 +7,7 @@ using System.Windows.Forms;
 using Models;
 
 
-namespace StudentManagermo
+namespace StudentGuanli
 {
     static class Program
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace StudentManager
+namespace StudentGuanli
 {
     partial class FrmScoreAnalyse
     {
@@ -50,7 +50,10 @@ namespace StudentManager
             this.labelNoExaminess = new System.Windows.Forms.Label();
             this.listBoxAbsensList = new System.Windows.Forms.ListBox();
             this.CloseWindows = new System.Windows.Forms.Button();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.饼形图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewScoreList)).BeginInit();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelStudentClass
@@ -177,6 +180,7 @@ namespace StudentManager
             this.textBoxNumberOfExaminess.Name = "textBoxNumberOfExaminess";
             this.textBoxNumberOfExaminess.Size = new System.Drawing.Size(112, 26);
             this.textBoxNumberOfExaminess.TabIndex = 6;
+            this.textBoxNumberOfExaminess.TextChanged += new System.EventHandler(this.textBoxNumberOfExaminess_TextChanged);
             // 
             // textBoxAbsentCount
             // 
@@ -275,7 +279,23 @@ namespace StudentManager
             this.CloseWindows.UseVisualStyleBackColor = true;
             this.CloseWindows.Click += new System.EventHandler(this.CloseWindows_Click);
             // 
-            // ScoreQueryList
+            // menuStrip1
+            // 
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.饼形图ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(805, 25);
+            this.menuStrip1.TabIndex = 18;
+            this.menuStrip1.Text = "menuStrip1";
+            // 
+            // 饼形图ToolStripMenuItem
+            // 
+            this.饼形图ToolStripMenuItem.Name = "饼形图ToolStripMenuItem";
+            this.饼形图ToolStripMenuItem.Size = new System.Drawing.Size(56, 21);
+            this.饼形图ToolStripMenuItem.Text = "饼形图";
+            // 
+            // FrmScoreAnalyse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -297,14 +317,18 @@ namespace StudentManager
             this.Controls.Add(this.buttonWholeSchoolScore);
             this.Controls.Add(this.comboBoxStudentClass);
             this.Controls.Add(this.labelStudentClass);
+            this.Controls.Add(this.menuStrip1);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.MainMenuStrip = this.menuStrip1;
             this.Margin = new System.Windows.Forms.Padding(4);
-            this.Name = "ScoreQueryList";
+            this.Name = "FrmScoreAnalyse";
             this.Text = "成绩查询";
             this.TransparencyKey = System.Drawing.Color.DimGray;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.ScoreQueryList_FormClosed_1);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewScoreList)).EndInit();
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,5 +357,7 @@ namespace StudentManager
         private System.Windows.Forms.DataGridViewTextBoxColumn SQLScore;
         private System.Windows.Forms.ListBox listBoxAbsensList;
         private System.Windows.Forms.Button CloseWindows;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 饼形图ToolStripMenuItem;
     }
 }

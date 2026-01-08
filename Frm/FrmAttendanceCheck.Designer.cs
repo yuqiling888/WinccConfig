@@ -1,5 +1,5 @@
 ﻿
-namespace StudentManager
+namespace StudentGuanli
 {
     partial class FrmAttendanceCheck
     {

@@ -1,5 +1,5 @@
 ﻿
-namespace StudentManager
+namespace StudentGuanli
 {
     partial class FrmScoreBrowse
     {
@@ -29,6 +29,9 @@ namespace StudentManager
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea6 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend6 = new System.Windows.Forms.DataVisualization.Charting.Legend();
+            System.Windows.Forms.DataVisualization.Charting.Series series6 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.labelStudentClass = new System.Windows.Forms.Label();
             this.comboBoxStudentClass = new System.Windows.Forms.ComboBox();
             this.labelScoreBrowse = new System.Windows.Forms.Label();
@@ -37,7 +40,13 @@ namespace StudentManager
             this.dataGridViewScoreList = new System.Windows.Forms.DataGridView();
             this.buttonAllScore = new System.Windows.Forms.Button();
             this.buttonCloseWindows = new System.Windows.Forms.Button();
+            this.btnCylindricality = new System.Windows.Forms.Button();
+            this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
+            this.btnPie = new System.Windows.Forms.Button();
+            this.btnhongtiao = new System.Windows.Forms.Button();
+            this.btnyuanhuan = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewScoreList)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
             this.SuspendLayout();
             // 
             // labelStudentClass
@@ -100,7 +109,7 @@ namespace StudentManager
             // buttonAllScore
             // 
             this.buttonAllScore.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.buttonAllScore.Location = new System.Drawing.Point(65, 370);
+            this.buttonAllScore.Location = new System.Drawing.Point(65, 358);
             this.buttonAllScore.Name = "buttonAllScore";
             this.buttonAllScore.Size = new System.Drawing.Size(117, 40);
             this.buttonAllScore.TabIndex = 6;
@@ -119,11 +128,72 @@ namespace StudentManager
             this.buttonCloseWindows.UseVisualStyleBackColor = true;
             this.buttonCloseWindows.Click += new System.EventHandler(this.buttonCloseWindows_Click);
             // 
+            // btnCylindricality
+            // 
+            this.btnCylindricality.Location = new System.Drawing.Point(663, 495);
+            this.btnCylindricality.Name = "btnCylindricality";
+            this.btnCylindricality.Size = new System.Drawing.Size(75, 23);
+            this.btnCylindricality.TabIndex = 8;
+            this.btnCylindricality.Text = "柱形图";
+            this.btnCylindricality.UseVisualStyleBackColor = true;
+            this.btnCylindricality.Click += new System.EventHandler(this.btnCylindricality_Click);
+            // 
+            // chart1
+            // 
+            chartArea6.Name = "ChartArea1";
+            this.chart1.ChartAreas.Add(chartArea6);
+            legend6.Name = "Legend1";
+            this.chart1.Legends.Add(legend6);
+            this.chart1.Location = new System.Drawing.Point(65, 421);
+            this.chart1.Name = "chart1";
+            series6.ChartArea = "ChartArea1";
+            series6.Legend = "Legend1";
+            series6.Name = "Series1";
+            this.chart1.Series.Add(series6);
+            this.chart1.Size = new System.Drawing.Size(441, 225);
+            this.chart1.TabIndex = 9;
+            this.chart1.Text = "chart1";
+            // 
+            // btnPie
+            // 
+            this.btnPie.Location = new System.Drawing.Point(772, 495);
+            this.btnPie.Name = "btnPie";
+            this.btnPie.Size = new System.Drawing.Size(75, 23);
+            this.btnPie.TabIndex = 10;
+            this.btnPie.Text = "饼形图";
+            this.btnPie.UseVisualStyleBackColor = true;
+            this.btnPie.Click += new System.EventHandler(this.btnPie_Click);
+            // 
+            // btnhongtiao
+            // 
+            this.btnhongtiao.Location = new System.Drawing.Point(663, 554);
+            this.btnhongtiao.Name = "btnhongtiao";
+            this.btnhongtiao.Size = new System.Drawing.Size(75, 23);
+            this.btnhongtiao.TabIndex = 11;
+            this.btnhongtiao.Text = "横条图";
+            this.btnhongtiao.UseVisualStyleBackColor = true;
+            this.btnhongtiao.Click += new System.EventHandler(this.btnhongtiao_Click);
+            // 
+            // btnyuanhuan
+            // 
+            this.btnyuanhuan.Location = new System.Drawing.Point(772, 554);
+            this.btnyuanhuan.Name = "btnyuanhuan";
+            this.btnyuanhuan.Size = new System.Drawing.Size(75, 23);
+            this.btnyuanhuan.TabIndex = 12;
+            this.btnyuanhuan.Text = "圆环图";
+            this.btnyuanhuan.UseVisualStyleBackColor = true;
+            this.btnyuanhuan.Click += new System.EventHandler(this.btnyuanhuan_Click);
+            // 
             // FrmScoreBrowse
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(749, 450);
+            this.ClientSize = new System.Drawing.Size(898, 675);
+            this.Controls.Add(this.btnyuanhuan);
+            this.Controls.Add(this.btnhongtiao);
+            this.Controls.Add(this.btnPie);
+            this.Controls.Add(this.chart1);
+            this.Controls.Add(this.btnCylindricality);
             this.Controls.Add(this.buttonCloseWindows);
             this.Controls.Add(this.buttonAllScore);
             this.Controls.Add(this.dataGridViewScoreList);
@@ -136,6 +206,7 @@ namespace StudentManager
             this.Text = "ScoreBrowse";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.FrmScoreBrowse_FormClosed);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewScoreList)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -151,5 +222,10 @@ namespace StudentManager
         private System.Windows.Forms.DataGridView dataGridViewScoreList;
         private System.Windows.Forms.Button buttonAllScore;
         private System.Windows.Forms.Button buttonCloseWindows;
+        private System.Windows.Forms.Button btnCylindricality;
+        private System.Windows.Forms.DataVisualization.Charting.Chart chart1;
+        private System.Windows.Forms.Button btnPie;
+        private System.Windows.Forms.Button btnhongtiao;
+        private System.Windows.Forms.Button btnyuanhuan;
     }
 }

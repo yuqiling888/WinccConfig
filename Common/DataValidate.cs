@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Text.RegularExpressions;
 
-namespace StudentManager.Common
+namespace StudentGuanli.Common
 {
     public class DataValidate
     {

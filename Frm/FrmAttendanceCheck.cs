@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using DAL;
 
-namespace StudentManager
+namespace StudentGuanli
 {
     public partial class FrmAttendanceCheck : Form
     {

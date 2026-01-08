@@ -9,11 +9,11 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Models;
 using DAL;
-using StudentManagermo;
+using StudentGuanli;
 using System.Data.SqlClient;
 
 
-namespace StudentManager
+namespace StudentGuanli
 {
     public partial class FrmUserLogin : Form
     {
@@ -73,7 +73,7 @@ namespace StudentManager
             SysAdmin objAdmin = new SysAdmin()
             {
                 LoginId = Convert.ToInt32(this.txtLoginId.Text.Trim()),
-                LoninPwd = this.txtLoginPwd.Text.Trim()
+                LoginPwd = this.txtLoginPwd.Text.Trim()
 
             };
 
