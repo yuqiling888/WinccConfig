@@ -132,7 +132,7 @@ namespace StudentGuanli
             // textBoxStudentIdNo
             // 
             this.textBoxStudentIdNo.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxStudentIdNo.Location = new System.Drawing.Point(138, 168);
+            this.textBoxStudentIdNo.Location = new System.Drawing.Point(138, 138);
             this.textBoxStudentIdNo.Name = "textBoxStudentIdNo";
             this.textBoxStudentIdNo.Size = new System.Drawing.Size(337, 26);
             this.textBoxStudentIdNo.TabIndex = 10;
@@ -141,7 +141,7 @@ namespace StudentGuanli
             // 
             this.labelStudentIdNo.AutoSize = true;
             this.labelStudentIdNo.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelStudentIdNo.Location = new System.Drawing.Point(57, 171);
+            this.labelStudentIdNo.Location = new System.Drawing.Point(57, 141);
             this.labelStudentIdNo.Name = "labelStudentIdNo";
             this.labelStudentIdNo.Size = new System.Drawing.Size(88, 16);
             this.labelStudentIdNo.TabIndex = 9;
@@ -150,7 +150,7 @@ namespace StudentGuanli
             // textBoxCard
             // 
             this.textBoxCard.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxCard.Location = new System.Drawing.Point(138, 218);
+            this.textBoxCard.Location = new System.Drawing.Point(138, 188);
             this.textBoxCard.Name = "textBoxCard";
             this.textBoxCard.Size = new System.Drawing.Size(337, 26);
             this.textBoxCard.TabIndex = 12;
@@ -159,7 +159,7 @@ namespace StudentGuanli
             // 
             this.labelCard.AutoSize = true;
             this.labelCard.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelCard.Location = new System.Drawing.Point(57, 221);
+            this.labelCard.Location = new System.Drawing.Point(57, 191);
             this.labelCard.Name = "labelCard";
             this.labelCard.Size = new System.Drawing.Size(88, 16);
             this.labelCard.TabIndex = 11;
@@ -168,7 +168,7 @@ namespace StudentGuanli
             // textBoxFamliyAddress
             // 
             this.textBoxFamliyAddress.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxFamliyAddress.Location = new System.Drawing.Point(138, 321);
+            this.textBoxFamliyAddress.Location = new System.Drawing.Point(138, 291);
             this.textBoxFamliyAddress.Name = "textBoxFamliyAddress";
             this.textBoxFamliyAddress.Size = new System.Drawing.Size(337, 26);
             this.textBoxFamliyAddress.TabIndex = 16;
@@ -177,7 +177,7 @@ namespace StudentGuanli
             // 
             this.labelFamliyAddress.AutoSize = true;
             this.labelFamliyAddress.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelFamliyAddress.Location = new System.Drawing.Point(57, 324);
+            this.labelFamliyAddress.Location = new System.Drawing.Point(57, 294);
             this.labelFamliyAddress.Name = "labelFamliyAddress";
             this.labelFamliyAddress.Size = new System.Drawing.Size(88, 16);
             this.labelFamliyAddress.TabIndex = 15;
@@ -186,7 +186,7 @@ namespace StudentGuanli
             // textBoxPhoneNumber
             // 
             this.textBoxPhoneNumber.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(138, 271);
+            this.textBoxPhoneNumber.Location = new System.Drawing.Point(138, 241);
             this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
             this.textBoxPhoneNumber.Size = new System.Drawing.Size(337, 26);
             this.textBoxPhoneNumber.TabIndex = 14;
@@ -195,7 +195,7 @@ namespace StudentGuanli
             // 
             this.labelPhoneNumber.AutoSize = true;
             this.labelPhoneNumber.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.labelPhoneNumber.Location = new System.Drawing.Point(57, 274);
+            this.labelPhoneNumber.Location = new System.Drawing.Point(57, 244);
             this.labelPhoneNumber.Name = "labelPhoneNumber";
             this.labelPhoneNumber.Size = new System.Drawing.Size(88, 16);
             this.labelPhoneNumber.TabIndex = 13;
@@ -205,7 +205,7 @@ namespace StudentGuanli
             // 
             this.pcbStuImage.Location = new System.Drawing.Point(517, 48);
             this.pcbStuImage.Name = "pcbStuImage";
-            this.pcbStuImage.Size = new System.Drawing.Size(261, 299);
+            this.pcbStuImage.Size = new System.Drawing.Size(261, 183);
             this.pcbStuImage.TabIndex = 17;
             this.pcbStuImage.TabStop = false;
             // 

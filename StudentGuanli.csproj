@@ -126,9 +126,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="CreatCode\ChartData.cs" />
+    <Compile Include="ChartData.cs" />
     <Compile Include="Common\DataGridViewStyle.cs" />
     <Compile Include="Common\SerializeObjectToString.cs" />
+    <Compile Include="CreatCode\CardData.cs" />
     <Compile Include="CreatCode\CreateQRCode.cs" />
     <Compile Include="ExtFrm\FrmUpdate.cs">
       <SubType>Form</SubType>
@@ -191,6 +192,12 @@
     <Compile Include="Frm\FrmUserLogin.Designer.cs">
       <DependentUpon>FrmUserLogin.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm\FrmVcard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\FrmVcard.Designer.cs">
+      <DependentUpon>FrmVcard.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs" />
@@ -211,7 +218,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="CreatCode\SuperChart.cs" />
+    <Compile Include="SuperChart.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ExtFrm\FrmUpdate.resx">
@@ -243,6 +250,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\FrmUserLogin.resx">
       <DependentUpon>FrmUserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\FrmVcard.resx">
+      <DependentUpon>FrmVcard.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
