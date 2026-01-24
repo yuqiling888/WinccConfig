@@ -255,5 +255,12 @@ namespace StudentGuanli
                 this.lblCurretUser.Text = Program.ObjCurrentAdmin.AdminName + "]";
             }
         }
+
+        private void btnCard_Click(object sender, EventArgs e)
+        {
+            FrmVcard objFrom = new FrmVcard();
+            objFrom.ShowDialog();
+
+        }
     }
 }

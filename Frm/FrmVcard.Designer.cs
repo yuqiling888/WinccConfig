@@ -1,5 +1,5 @@
 ﻿
-namespace StudentGuanli.Frm
+namespace StudentGuanli
 {
     partial class FrmVcard
     {
@@ -29,11 +29,12 @@ namespace StudentGuanli.Frm
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnCreat = new System.Windows.Forms.Button();
-            this.pcbStuImage = new System.Windows.Forms.PictureBox();
+            this.pbImage = new System.Windows.Forms.PictureBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
-            this.textBoxPhoneNumber = new System.Windows.Forms.TextBox();
+            this.tbMobilePhone = new System.Windows.Forms.TextBox();
             this.lblPhoneNumber = new System.Windows.Forms.Label();
             this.textBoxTelePhone = new System.Windows.Forms.TextBox();
             this.lblTele = new System.Windows.Forms.Label();
@@ -47,27 +48,29 @@ namespace StudentGuanli.Frm
             this.lblName = new System.Windows.Forms.Label();
             this.textBoxEmail = new System.Windows.Forms.TextBox();
             this.lblemail = new System.Windows.Forms.Label();
-            this.textBoxUrl = new System.Windows.Forms.TextBox();
+            this.tbUrl = new System.Windows.Forms.TextBox();
             this.lblURL = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.pcbStuImage)).BeginInit();
+            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
             // 
             // btnCreat
             // 
-            this.btnCreat.Location = new System.Drawing.Point(562, 369);
+            this.btnCreat.Location = new System.Drawing.Point(307, 551);
             this.btnCreat.Name = "btnCreat";
             this.btnCreat.Size = new System.Drawing.Size(101, 32);
             this.btnCreat.TabIndex = 36;
             this.btnCreat.Text = "开始生成";
             this.btnCreat.UseVisualStyleBackColor = true;
+            this.btnCreat.Click += new System.EventHandler(this.btnCreat_Click);
             // 
-            // pcbStuImage
+            // pbImage
             // 
-            this.pcbStuImage.Location = new System.Drawing.Point(500, 45);
-            this.pcbStuImage.Name = "pcbStuImage";
-            this.pcbStuImage.Size = new System.Drawing.Size(261, 258);
-            this.pcbStuImage.TabIndex = 35;
-            this.pcbStuImage.TabStop = false;
+            this.pbImage.Location = new System.Drawing.Point(498, 59);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(856, 628);
+            this.pbImage.TabIndex = 35;
+            this.pbImage.TabStop = false;
             // 
             // textBoxAddress
             // 
@@ -76,6 +79,7 @@ namespace StudentGuanli.Frm
             this.textBoxAddress.Name = "textBoxAddress";
             this.textBoxAddress.Size = new System.Drawing.Size(337, 26);
             this.textBoxAddress.TabIndex = 34;
+            this.textBoxAddress.Text = "广东省佛山市南海区";
             // 
             // lblAddress
             // 
@@ -87,13 +91,14 @@ namespace StudentGuanli.Frm
             this.lblAddress.TabIndex = 33;
             this.lblAddress.Text = "地址：";
             // 
-            // textBoxPhoneNumber
+            // tbMobilePhone
             // 
-            this.textBoxPhoneNumber.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxPhoneNumber.Location = new System.Drawing.Point(121, 238);
-            this.textBoxPhoneNumber.Name = "textBoxPhoneNumber";
-            this.textBoxPhoneNumber.Size = new System.Drawing.Size(337, 26);
-            this.textBoxPhoneNumber.TabIndex = 32;
+            this.tbMobilePhone.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbMobilePhone.Location = new System.Drawing.Point(121, 238);
+            this.tbMobilePhone.Name = "tbMobilePhone";
+            this.tbMobilePhone.Size = new System.Drawing.Size(337, 26);
+            this.tbMobilePhone.TabIndex = 32;
+            this.tbMobilePhone.Text = "18052456325";
             // 
             // lblPhoneNumber
             // 
@@ -104,7 +109,6 @@ namespace StudentGuanli.Frm
             this.lblPhoneNumber.Size = new System.Drawing.Size(56, 16);
             this.lblPhoneNumber.TabIndex = 31;
             this.lblPhoneNumber.Text = "手机：";
-            this.lblPhoneNumber.Click += new System.EventHandler(this.lblPhoneNumber_Click);
             // 
             // textBoxTelePhone
             // 
@@ -113,6 +117,7 @@ namespace StudentGuanli.Frm
             this.textBoxTelePhone.Name = "textBoxTelePhone";
             this.textBoxTelePhone.Size = new System.Drawing.Size(337, 26);
             this.textBoxTelePhone.TabIndex = 30;
+            this.textBoxTelePhone.Text = "020-52414521";
             // 
             // lblTele
             // 
@@ -131,6 +136,7 @@ namespace StudentGuanli.Frm
             this.textBoxCompany.Name = "textBoxCompany";
             this.textBoxCompany.Size = new System.Drawing.Size(337, 26);
             this.textBoxCompany.TabIndex = 28;
+            this.textBoxCompany.Text = "华龙科技有限公司";
             // 
             // lblCorp
             // 
@@ -149,6 +155,7 @@ namespace StudentGuanli.Frm
             this.textBoxDepartMent.Name = "textBoxDepartMent";
             this.textBoxDepartMent.Size = new System.Drawing.Size(337, 26);
             this.textBoxDepartMent.TabIndex = 24;
+            this.textBoxDepartMent.Text = "生产部";
             // 
             // lblOrg
             // 
@@ -167,6 +174,7 @@ namespace StudentGuanli.Frm
             this.textBoxPost.Name = "textBoxPost";
             this.textBoxPost.Size = new System.Drawing.Size(120, 26);
             this.textBoxPost.TabIndex = 22;
+            this.textBoxPost.Text = "总监";
             // 
             // lblTitle
             // 
@@ -185,6 +193,7 @@ namespace StudentGuanli.Frm
             this.tbxName.Name = "tbxName";
             this.tbxName.Size = new System.Drawing.Size(120, 26);
             this.tbxName.TabIndex = 20;
+            this.tbxName.Text = "谢小姐";
             // 
             // lblName
             // 
@@ -203,6 +212,7 @@ namespace StudentGuanli.Frm
             this.textBoxEmail.Name = "textBoxEmail";
             this.textBoxEmail.Size = new System.Drawing.Size(337, 26);
             this.textBoxEmail.TabIndex = 40;
+            this.textBoxEmail.Text = "761366524@qq.com";
             // 
             // lblemail
             // 
@@ -214,13 +224,14 @@ namespace StudentGuanli.Frm
             this.lblemail.TabIndex = 39;
             this.lblemail.Text = "邮箱：";
             // 
-            // textBoxUrl
+            // tbUrl
             // 
-            this.textBoxUrl.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBoxUrl.Location = new System.Drawing.Point(121, 382);
-            this.textBoxUrl.Name = "textBoxUrl";
-            this.textBoxUrl.Size = new System.Drawing.Size(337, 26);
-            this.textBoxUrl.TabIndex = 38;
+            this.tbUrl.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.tbUrl.Location = new System.Drawing.Point(121, 382);
+            this.tbUrl.Name = "tbUrl";
+            this.tbUrl.Size = new System.Drawing.Size(337, 26);
+            this.tbUrl.TabIndex = 38;
+            this.tbUrl.Text = "htttp//www.Hwalong.com";
             // 
             // lblURL
             // 
@@ -232,20 +243,26 @@ namespace StudentGuanli.Frm
             this.lblURL.TabIndex = 37;
             this.lblURL.Text = "网址：";
             // 
+            // imageList1
+            // 
+            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
+            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
+            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
             // FrmVcard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1404, 737);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.lblemail);
-            this.Controls.Add(this.textBoxUrl);
+            this.Controls.Add(this.tbUrl);
             this.Controls.Add(this.lblURL);
             this.Controls.Add(this.btnCreat);
-            this.Controls.Add(this.pcbStuImage);
+            this.Controls.Add(this.pbImage);
             this.Controls.Add(this.textBoxAddress);
             this.Controls.Add(this.lblAddress);
-            this.Controls.Add(this.textBoxPhoneNumber);
+            this.Controls.Add(this.tbMobilePhone);
             this.Controls.Add(this.lblPhoneNumber);
             this.Controls.Add(this.textBoxTelePhone);
             this.Controls.Add(this.lblTele);
@@ -259,8 +276,7 @@ namespace StudentGuanli.Frm
             this.Controls.Add(this.lblName);
             this.Name = "FrmVcard";
             this.Text = "FrmVcard";
-            this.Load += new System.EventHandler(this.FrmVcard_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pcbStuImage)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbImage)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -269,10 +285,10 @@ namespace StudentGuanli.Frm
         #endregion
 
         private System.Windows.Forms.Button btnCreat;
-        private System.Windows.Forms.PictureBox pcbStuImage;
+        private System.Windows.Forms.PictureBox pbImage;
         private System.Windows.Forms.TextBox textBoxAddress;
         private System.Windows.Forms.Label lblAddress;
-        private System.Windows.Forms.TextBox textBoxPhoneNumber;
+        private System.Windows.Forms.TextBox tbMobilePhone;
         private System.Windows.Forms.Label lblPhoneNumber;
         private System.Windows.Forms.TextBox textBoxTelePhone;
         private System.Windows.Forms.Label lblTele;
@@ -286,7 +302,8 @@ namespace StudentGuanli.Frm
         private System.Windows.Forms.Label lblName;
         private System.Windows.Forms.TextBox textBoxEmail;
         private System.Windows.Forms.Label lblemail;
-        private System.Windows.Forms.TextBox textBoxUrl;
+        private System.Windows.Forms.TextBox tbUrl;
         private System.Windows.Forms.Label lblURL;
+        private System.Windows.Forms.ImageList imageList1;
     }
 }

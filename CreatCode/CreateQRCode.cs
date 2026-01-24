@@ -53,12 +53,26 @@ namespace StudentGuanli
             //【3】创建二维码编码类对象（第三方的dll）并设置属性
             QRCodeEncoder qRCodeEncoder = new QRCodeEncoder();
             qRCodeEncoder.QRCodeEncodeMode = QRCodeEncoder.ENCODE_MODE.BYTE;//设置编码方式
-            qRCodeEncoder.QRCodeScale = 3;//设置二维码图片大小
+            qRCodeEncoder.QRCodeScale = 8;//设置二维码图片大小
             qRCodeEncoder.QRCodeVersion = 0;//设置版本
             //设置错误校验级别，因为二维码有纠错能力，所以允许加入Logo图片
             qRCodeEncoder.QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.M;
 
-            return null;
+            //【4】按照编码格式将名片信息编码成图片文件
+            Image image = qRCodeEncoder.Encode(cardString, Encoding.GetEncoding("utf-8"));
+
+            //【5】画出二维码图片
+            int x = (imageWidth - image.Width) / 2;
+            int y = (imageHeight - image.Height) / 2;
+            graphics.DrawImage(image, new Point(x, y));  //使用graphics对象在背景上画出二维码图片
+
+            //【6】画出LoGO图片并添加到二维码上
+            image = Properties.Resources.logo1; //通过资源文件获取图片
+            x = (imageWidth - image.Width) / 2;
+            y = (imageHeight - image.Height) / 2;
+            graphics.DrawImage(image, new Point(x, y));  //使用graphics对象在背景上显示L
+
+            return bmp;
         }
 
 
