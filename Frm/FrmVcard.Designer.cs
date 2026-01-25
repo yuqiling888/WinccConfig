@@ -31,7 +31,6 @@ namespace StudentGuanli
         {
             this.components = new System.ComponentModel.Container();
             this.btnCreat = new System.Windows.Forms.Button();
-            this.pbImage = new System.Windows.Forms.PictureBox();
             this.textBoxAddress = new System.Windows.Forms.TextBox();
             this.lblAddress = new System.Windows.Forms.Label();
             this.tbMobilePhone = new System.Windows.Forms.TextBox();
@@ -51,6 +50,7 @@ namespace StudentGuanli
             this.tbUrl = new System.Windows.Forms.TextBox();
             this.lblURL = new System.Windows.Forms.Label();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.pbImage = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pbImage)).BeginInit();
             this.SuspendLayout();
             // 
@@ -63,14 +63,6 @@ namespace StudentGuanli
             this.btnCreat.Text = "开始生成";
             this.btnCreat.UseVisualStyleBackColor = true;
             this.btnCreat.Click += new System.EventHandler(this.btnCreat_Click);
-            // 
-            // pbImage
-            // 
-            this.pbImage.Location = new System.Drawing.Point(498, 59);
-            this.pbImage.Name = "pbImage";
-            this.pbImage.Size = new System.Drawing.Size(856, 628);
-            this.pbImage.TabIndex = 35;
-            this.pbImage.TabStop = false;
             // 
             // textBoxAddress
             // 
@@ -249,11 +241,20 @@ namespace StudentGuanli
             this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
             // 
+            // pbImage
+            // 
+            this.pbImage.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.pbImage.Location = new System.Drawing.Point(498, 12);
+            this.pbImage.Name = "pbImage";
+            this.pbImage.Size = new System.Drawing.Size(856, 722);
+            this.pbImage.TabIndex = 35;
+            this.pbImage.TabStop = false;
+            // 
             // FrmVcard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1404, 737);
+            this.ClientSize = new System.Drawing.Size(1410, 746);
             this.Controls.Add(this.textBoxEmail);
             this.Controls.Add(this.lblemail);
             this.Controls.Add(this.tbUrl);

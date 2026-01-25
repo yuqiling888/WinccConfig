@@ -53,12 +53,12 @@ namespace StudentGuanli
             this.label2 = new System.Windows.Forms.Label();
             this.lblVersion = new System.Windows.Forms.Label();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnCard = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.button4 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.btnCard = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.SuspendLayout();
@@ -294,6 +294,16 @@ namespace StudentGuanli
             this.splitContainer1.SplitterWidth = 10;
             this.splitContainer1.TabIndex = 18;
             // 
+            // btnCard
+            // 
+            this.btnCard.Location = new System.Drawing.Point(14, 435);
+            this.btnCard.Name = "btnCard";
+            this.btnCard.Size = new System.Drawing.Size(75, 23);
+            this.btnCard.TabIndex = 22;
+            this.btnCard.Text = "公司名片";
+            this.btnCard.UseVisualStyleBackColor = true;
+            this.btnCard.Click += new System.EventHandler(this.btnCard_Click);
+            // 
             // button3
             // 
             this.button3.Location = new System.Drawing.Point(14, 498);
@@ -329,21 +339,12 @@ namespace StudentGuanli
             this.button2.TabIndex = 18;
             this.button2.Text = "批量导入";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
-            // 
-            // btnCard
-            // 
-            this.btnCard.Location = new System.Drawing.Point(14, 435);
-            this.btnCard.Name = "btnCard";
-            this.btnCard.Size = new System.Drawing.Size(75, 23);
-            this.btnCard.TabIndex = 22;
-            this.btnCard.Text = "公司名片";
-            this.btnCard.UseVisualStyleBackColor = true;
-            this.btnCard.Click += new System.EventHandler(this.btnCard_Click);
             // 
             // FrmDemo
             // 

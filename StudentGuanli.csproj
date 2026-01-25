@@ -143,6 +143,12 @@
     <Compile Include="Frm\FrmModifyPwd.Designer.cs">
       <DependentUpon>FrmModifyPwd.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm\FrmNPOI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\FrmNPOI.Designer.cs">
+      <DependentUpon>FrmNPOI.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm\FrmStudentInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -227,6 +233,9 @@
     <EmbeddedResource Include="Frm\FrmModifyPwd.resx">
       <DependentUpon>FrmModifyPwd.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm\FrmNPOI.resx">
+      <DependentUpon>FrmNPOI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm\FrmStudentInfo.resx">
       <DependentUpon>FrmStudentInfo.cs</DependentUpon>
     </EmbeddedResource>
@@ -289,6 +298,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\logo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\wxmp.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>

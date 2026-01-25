@@ -45,6 +45,7 @@ namespace StudentGuanli
         {
             //【1】根据名片内容生成
             string cardString = GetCodeInfo(cardData);
+            //string cardString = "wxid_6hs9xky5xvon11";
             //【2】创建二维码需要的图片对象和绘图类对象
             Bitmap bmp = new Bitmap(imageWidth, imageHeight);
             Graphics graphics = Graphics.FromImage(bmp);
@@ -53,7 +54,7 @@ namespace StudentGuanli
             //【3】创建二维码编码类对象（第三方的dll）并设置属性
             QRCodeEncoder qRCodeEncoder = new QRCodeEncoder();
             qRCodeEncoder.QRCodeEncodeMode = QRCodeEncoder.ENCODE_MODE.BYTE;//设置编码方式
-            qRCodeEncoder.QRCodeScale = 8;//设置二维码图片大小
+            qRCodeEncoder.QRCodeScale = 3;//设置二维码图片大小
             qRCodeEncoder.QRCodeVersion = 0;//设置版本
             //设置错误校验级别，因为二维码有纠错能力，所以允许加入Logo图片
             qRCodeEncoder.QRCodeErrorCorrect = QRCodeEncoder.ERROR_CORRECTION.M;
@@ -62,15 +63,23 @@ namespace StudentGuanli
             Image image = qRCodeEncoder.Encode(cardString, Encoding.GetEncoding("utf-8"));
 
             //【5】画出二维码图片
-            int x = (imageWidth - image.Width) / 2;
-            int y = (imageHeight - image.Height) / 2;
-            graphics.DrawImage(image, new Point(x, y));  //使用graphics对象在背景上画出二维码图片
+            //int x = (imageWidth - image.Width) / 2;
+            //int y = (imageHeight - image.Height) / 2;
+            //graphics.DrawImage(image, new Point(x, y));  //使用graphics对象在背景上画出二维码图片
 
             //【6】画出LoGO图片并添加到二维码上
-            image = Properties.Resources.logo1; //通过资源文件获取图片
-            x = (imageWidth - image.Width) / 2;
-            y = (imageHeight - image.Height) / 2;
-            graphics.DrawImage(image, new Point(x, y));  //使用graphics对象在背景上显示L
+            image = Properties.Resources.wxmp; //通过资源文件获取图片
+                                               //int x = (imageWidth - image.Width) / 2;
+                                               //int y = (imageHeight - image.Height) / 2;
+                                               //graphics.DrawImage(image, new Point(x, y));  //使用graphics对象在背景上显示L
+                                               // 定义目标区域为整个背景
+            Rectangle destRect = new Rectangle(0, 0, imageWidth, imageHeight);
+
+            // 设置高质量插值模式以确保拉伸后清晰
+            graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+
+            // 绘制图片
+            graphics.DrawImage(image, destRect);
 
             return bmp;
         }
