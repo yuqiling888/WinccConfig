@@ -40,6 +40,7 @@ namespace StudentGuanli
         public static FrmScoreAnalyse objFrmScoreQueryList = null;
         public static FrmAttendanceCheck objAttendanceCheck = null;
         public static FrmScoreBrowse objScoreBrowse = null;
+        public static FrmEquipmentConfig objFrmEquiConfig = null;
 
 
 
@@ -91,14 +92,7 @@ namespace StudentGuanli
 
         //private void buttonQueryStudent_Click(object sender, EventArgs e)
         //{
-        //    if (objFrmStudentManage == null)    //如果创建的静态变量为空，即没有创建的对象实体
-        //    {
-        //        objFrmStudentManage = new FrmStudentManage();   //新建一个对象实体
-        //        objFrmStudentManage.Show();   //显示实体
-        //    }
-        //    else
-        //        objFrmStudentManage.Activate();   //激活这个实体，即此时为最小化状态
-        //    objFrmStudentManage.WindowState = FormWindowState.Normal;
+           
 
         //}
 
@@ -112,12 +106,12 @@ namespace StudentGuanli
         //    else
         //        objFrmScoreQueryList.Activate();  //激活这个实体，即此时为最小化状态
         //    objFrmScoreQueryList.WindowState = FormWindowState.Normal;   //窗口大小为默认大小
-            
+
         //}
 
-        
 
-       
+
+
 
         //private void buttonAttendanceManage_Click(object sender, EventArgs e)
         //{
@@ -155,17 +149,7 @@ namespace StudentGuanli
         {
 
         }
-        private void CloseForm()
-        {
-            //判断右侧容器中是否己存在窗体
-            foreach (Control item in this.splitContainer1.Panel2.Controls)
-                if (item is Form)
-                {
-                    Form objControl = (Form)item;
-                    objControl.Close();
-                }
-
-        }
+      
 
         private void OpenForm(Form objForm)
         {
@@ -176,6 +160,17 @@ namespace StudentGuanli
             objForm.Parent = this.splitContainer1.Panel2;
             objForm.Dock = DockStyle.Fill;//设置子窗体随容器大小自动调整窗体大小
             objForm.Show();
+        }
+        private void CloseForm()
+        {
+            //判断右侧容器中是否己存在窗体
+            foreach (Control item in this.splitContainer1.Panel2.Controls)
+                if (item is Form)
+                {
+                    Form objControl = (Form)item;
+                    objControl.Close();
+                }
+
         }
 
         private void btnAddStudent_Click(object sender, EventArgs e)
@@ -265,6 +260,32 @@ namespace StudentGuanli
 
         private void button2_Click(object sender, EventArgs e)
         {
+
+        }
+
+        private void btnExport_Click(object sender, EventArgs e)
+        {
+            FrmNPOI objFrom = new FrmNPOI();
+            objFrom.ShowDialog();
+        }
+
+        private void btnScoreReport_Click(object sender, EventArgs e)
+        {
+            FrmScoreReport objFrom = new FrmScoreReport();
+            objFrom.ShowDialog();
+
+        }
+
+        private void btnEquiConfig_Click(object sender, EventArgs e)
+        {
+            if (objFrmEquiConfig == null)    //如果创建的静态变量为空，即没有创建的对象实体
+            {
+                objFrmEquiConfig = new FrmEquipmentConfig();   //新建一个对象实体
+                objFrmEquiConfig.Show();   //显示实体
+            }
+            else
+                objFrmEquiConfig.Activate();   //激活这个实体，即此时为最小化状态
+            objFrmEquiConfig.WindowState = FormWindowState.Normal;
 
         }
     }

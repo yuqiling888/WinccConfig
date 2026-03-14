@@ -30,8 +30,8 @@ namespace StudentGuanli
             this.textBoxPhoneNumber.Text = objExStudent.PhoneNumber.ToString();
             this.textBoxFamliyAddress.Text = objExStudent.StudentAddress;
             //显示照片
-            this.pcbStuImage.Image = objExStudent.StuImage.Length!=0?
-                (Image)new Common.SerializeObjectToString().DeserializeToObject(objExStudent.StuImage):Image.FromFile("default.png");
+            //this.pcbStuImage.Image = objExStudent.StuImage.Length!=0?
+            //    (Image)new Common.SerializeObjectToString().DeserializeToObject(objExStudent.StuImage):Image.FromFile("default.png");
         }
 
 

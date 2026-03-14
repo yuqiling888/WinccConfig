@@ -148,7 +148,7 @@ namespace StudentGuanli
                 ClassId = Convert.ToInt32(this.cboClassName.SelectedValue),
                 ClassName = this.cboClassName.Text,  //为了列表展示需要
                 CardNo = this.tbCardNo.Text.Trim().ToString(),
-                StuImage = this.pbStuImage.Image != null ? new Common.SerializeObjectToString().SerializeOboject(this.pbStuImage.Image):""
+             //   StuImage = this.pbStuImage.Image != null ? new Common.SerializeObjectToString().SerializeOboject(this.pbStuImage.Image):""
 
             };
 
@@ -307,6 +307,8 @@ namespace StudentGuanli
         //修改
         private void btnEdit_Click(object sender, EventArgs e)
         {
+            
+            
             //没有列表为空
             if (this.objStudetList.Count == 0)
             {

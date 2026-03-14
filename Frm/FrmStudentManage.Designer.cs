@@ -149,8 +149,9 @@ namespace StudentGuanli
             this.dgvStudentList.Name = "dgvStudentList";
             this.dgvStudentList.ReadOnly = true;
             this.dgvStudentList.RowTemplate.Height = 23;
-            this.dgvStudentList.Size = new System.Drawing.Size(872, 278);
+            this.dgvStudentList.Size = new System.Drawing.Size(945, 278);
             this.dgvStudentList.TabIndex = 9;
+            this.dgvStudentList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvStudentList_CellContentClick);
             this.dgvStudentList.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewStudentList_CellDoubleClick);
             this.dgvStudentList.RowPostPaint += new System.Windows.Forms.DataGridViewRowPostPaintEventHandler(this.dgvStudentList_RowPostPaint);
             // 

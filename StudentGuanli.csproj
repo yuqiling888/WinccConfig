@@ -54,6 +54,25 @@
     <Reference Include="Microsoft.IO.RecyclableMemoryStream, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.IO.RecyclableMemoryStream.3.0.1\lib\netstandard2.0\Microsoft.IO.RecyclableMemoryStream.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.DataVisualization, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Design, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.ProcessingObjectModel, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.ProcessingObjectModel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.WebForms, Version=15.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.ReportingServices.ReportViewerControl.Winforms.140.340.80\lib\net40\Microsoft.ReportViewer.WinForms.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SqlServer.Types, Version=14.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.SqlServer.Types.14.0.314.76\lib\net40\Microsoft.SqlServer.Types.dll</HintPath>
+    </Reference>
     <Reference Include="NModbus, Version=3.0.81.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>packages\NModbus.3.0.81\lib\net46\NModbus.dll</HintPath>
     </Reference>
@@ -137,6 +156,18 @@
     <Compile Include="ExtFrm\FrmUpdate.Designer.cs">
       <DependentUpon>FrmUpdate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Frm\FrmEquipmentConfig.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\FrmEquipmentConfig.Designer.cs">
+      <DependentUpon>FrmEquipmentConfig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmScoreReport.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmScoreReport.Designer.cs">
+      <DependentUpon>FrmScoreReport.cs</DependentUpon>
+    </Compile>
     <Compile Include="Frm\FrmModifyPwd.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +179,12 @@
     </Compile>
     <Compile Include="Frm\FrmNPOI.Designer.cs">
       <DependentUpon>FrmNPOI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm\FrmSerialPort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm\FrmSerialPort.Designer.cs">
+      <DependentUpon>FrmSerialPort.cs</DependentUpon>
     </Compile>
     <Compile Include="Frm\FrmStudentInfo.cs">
       <SubType>Form</SubType>
@@ -224,17 +261,27 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
+    <Compile Include="SqlServerTypes\Loader.cs" />
     <Compile Include="SuperChart.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="ExtFrm\FrmUpdate.resx">
       <DependentUpon>FrmUpdate.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Frm\FrmEquipmentConfig.resx">
+      <DependentUpon>FrmEquipmentConfig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmScoreReport.resx">
+      <DependentUpon>FrmScoreReport.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Frm\FrmModifyPwd.resx">
       <DependentUpon>FrmModifyPwd.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\FrmNPOI.resx">
       <DependentUpon>FrmNPOI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm\FrmSerialPort.resx">
+      <DependentUpon>FrmSerialPort.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Frm\FrmStudentInfo.resx">
       <DependentUpon>FrmStudentInfo.cs</DependentUpon>
@@ -270,14 +317,29 @@
     <EmbeddedResource Include="Frm\FrmScoreAnalyse.resx">
       <DependentUpon>FrmScoreAnalyse.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Report1.rdlc" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
     <None Include="Properties\DataSources\AddStudent.datasource" />
+    <None Include="Properties\DataSources\DAL.AttendanceService.datasource" />
+    <None Include="Properties\DataSources\DAL.NPOIService.datasource" />
+    <None Include="Properties\DataSources\DAL.OleDbHelper.datasource" />
+    <None Include="Properties\DataSources\DAL.ScoreListService.datasource" />
+    <None Include="Properties\DataSources\DAL.SQLHelper.datasource" />
+    <None Include="Properties\DataSources\DAL.StudentClassService.datasource" />
+    <None Include="Properties\DataSources\DAL.StudentService.datasource" />
+    <None Include="Properties\DataSources\DAL.SysAdminService.datasource" />
     <None Include="Properties\DataSources\FrmDemo.datasource" />
     <None Include="Properties\DataSources\FrmStudentManage.datasource" />
     <None Include="Properties\DataSources\FrmUserLogin.datasource" />
+    <None Include="Properties\DataSources\Models.Attendance.datasource" />
+    <None Include="Properties\DataSources\Models.ScoreList.datasource" />
+    <None Include="Properties\DataSources\Models.Student.datasource" />
+    <None Include="Properties\DataSources\Models.StudentClass.datasource" />
+    <None Include="Properties\DataSources\Models.StudentExt.datasource" />
+    <None Include="Properties\DataSources\Models.SysAdmin.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings1.Designer.cs</LastGenOutput>
@@ -301,6 +363,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\wxmp.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Image\warning_icon.png" />
+    <None Include="Image\family_illustration-01.png" />
+    <None Include="Image\FeatureToastDlpImg.png" />
+    <None Include="Image\RestartNowPower_80.contrast-white.png" />
+    <None Include="Image\Square44x44Logo.scale-200.png" />
+    <Content Include="SqlServerTypes\readme.htm" />
+    <Content Include="SqlServerTypes\x64\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x64\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\msvcr120.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SqlServerTypes\x86\SqlServerSpatial140.dll">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
   <ProjectExtensions>

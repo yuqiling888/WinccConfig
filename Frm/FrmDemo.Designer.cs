@@ -41,7 +41,20 @@ namespace StudentGuanli
             this.btnAttendanceCheck = new System.Windows.Forms.Button();
             this.btnChangePassword = new System.Windows.Forms.Button();
             this.btnAccountSwitch = new System.Windows.Forms.Button();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
+            this.label2 = new System.Windows.Forms.Label();
+            this.lblVersion = new System.Windows.Forms.Label();
+            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
+            this.btnEquiConfig = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.btnScoreReport = new System.Windows.Forms.Button();
+            this.btnExport = new System.Windows.Forms.Button();
+            this.btnCard = new System.Windows.Forms.Button();
+            this.button3 = new System.Windows.Forms.Button();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.serialPort1 = new System.IO.Ports.SerialPort(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.学员管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiAddStudent = new System.Windows.Forms.ToolStripMenuItem();
@@ -49,22 +62,13 @@ namespace StudentGuanli
             this.成绩管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.考勤管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.帮助ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.splitContainer3 = new System.Windows.Forms.SplitContainer();
-            this.label2 = new System.Windows.Forms.Label();
-            this.lblVersion = new System.Windows.Forms.Label();
-            this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.btnCard = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.menuStrip1.SuspendLayout();
+            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).BeginInit();
             this.splitContainer3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.SuspendLayout();
+            this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // lblCurretUser
@@ -156,7 +160,7 @@ namespace StudentGuanli
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.Location = new System.Drawing.Point(14, 352);
+            this.btnChangePassword.Location = new System.Drawing.Point(12, 395);
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(75, 23);
             this.btnChangePassword.TabIndex = 14;
@@ -174,20 +178,146 @@ namespace StudentGuanli
             this.btnAccountSwitch.UseVisualStyleBackColor = true;
             this.btnAccountSwitch.Click += new System.EventHandler(this.btnAccountSwitch_Click);
             // 
-            // menuStrip1
+            // splitContainer3
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.系统ToolStripMenuItem,
-            this.学员管理ToolStripMenuItem,
-            this.成绩管理ToolStripMenuItem,
-            this.考勤管理ToolStripMenuItem,
-            this.帮助ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1320, 25);
-            this.menuStrip1.TabIndex = 11;
-            this.menuStrip1.Text = "menuStrip1";
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
+            this.splitContainer3.Name = "splitContainer3";
+            this.splitContainer3.Size = new System.Drawing.Size(150, 100);
+            this.splitContainer3.TabIndex = 0;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(24, 618);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 12);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "版本号：";
+            // 
+            // lblVersion
+            // 
+            this.lblVersion.AutoSize = true;
+            this.lblVersion.Location = new System.Drawing.Point(81, 618);
+            this.lblVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.lblVersion.Name = "lblVersion";
+            this.lblVersion.Size = new System.Drawing.Size(29, 12);
+            this.lblVersion.TabIndex = 17;
+            this.lblVersion.Text = "版本";
+            // 
+            // splitContainer1
+            // 
+            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.splitContainer1.Location = new System.Drawing.Point(0, 25);
+            this.splitContainer1.Name = "splitContainer1";
+            // 
+            // splitContainer1.Panel1
+            // 
+            this.splitContainer1.Panel1.Controls.Add(this.btnEquiConfig);
+            this.splitContainer1.Panel1.Controls.Add(this.comboBox1);
+            this.splitContainer1.Panel1.Controls.Add(this.btnScoreReport);
+            this.splitContainer1.Panel1.Controls.Add(this.btnExport);
+            this.splitContainer1.Panel1.Controls.Add(this.btnCard);
+            this.splitContainer1.Panel1.Controls.Add(this.button3);
+            this.splitContainer1.Panel1.Controls.Add(this.button4);
+            this.splitContainer1.Panel1.Controls.Add(this.button1);
+            this.splitContainer1.Panel1.Controls.Add(this.monthCalendar1);
+            this.splitContainer1.Panel1.Controls.Add(this.lblVersion);
+            this.splitContainer1.Panel1.Controls.Add(this.btnAddStudent);
+            this.splitContainer1.Panel1.Controls.Add(this.label2);
+            this.splitContainer1.Panel1.Controls.Add(this.btnStudentManage);
+            this.splitContainer1.Panel1.Controls.Add(this.label1);
+            this.splitContainer1.Panel1.Controls.Add(this.lblCurretUser);
+            this.splitContainer1.Panel1.Controls.Add(this.btnChangePassword);
+            this.splitContainer1.Panel1.Controls.Add(this.btnScoreAnalyse);
+            this.splitContainer1.Panel1.Controls.Add(this.btnAccountSwitch);
+            this.splitContainer1.Panel1.Controls.Add(this.btnAttendanceManage);
+            this.splitContainer1.Panel1.Controls.Add(this.btnAttendanceCheck);
+            this.splitContainer1.Panel1.Controls.Add(this.btnScoreBrowse);
+            this.splitContainer1.Size = new System.Drawing.Size(1320, 695);
+            this.splitContainer1.SplitterDistance = 289;
+            this.splitContainer1.SplitterWidth = 10;
+            this.splitContainer1.TabIndex = 18;
+            // 
+            // btnEquiConfig
+            // 
+            this.btnEquiConfig.Location = new System.Drawing.Point(114, 545);
+            this.btnEquiConfig.Name = "btnEquiConfig";
+            this.btnEquiConfig.Size = new System.Drawing.Size(75, 23);
+            this.btnEquiConfig.TabIndex = 26;
+            this.btnEquiConfig.Text = "软件配置";
+            this.btnEquiConfig.UseVisualStyleBackColor = true;
+            this.btnEquiConfig.Click += new System.EventHandler(this.btnEquiConfig_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(165, 641);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(121, 20);
+            this.comboBox1.TabIndex = 25;
+            // 
+            // btnScoreReport
+            // 
+            this.btnScoreReport.Location = new System.Drawing.Point(14, 352);
+            this.btnScoreReport.Name = "btnScoreReport";
+            this.btnScoreReport.Size = new System.Drawing.Size(75, 23);
+            this.btnScoreReport.TabIndex = 24;
+            this.btnScoreReport.Text = "成绩报表";
+            this.btnScoreReport.UseVisualStyleBackColor = true;
+            this.btnScoreReport.Click += new System.EventHandler(this.btnScoreReport_Click);
+            // 
+            // btnExport
+            // 
+            this.btnExport.Location = new System.Drawing.Point(114, 395);
+            this.btnExport.Name = "btnExport";
+            this.btnExport.Size = new System.Drawing.Size(75, 23);
+            this.btnExport.TabIndex = 23;
+            this.btnExport.Text = "导出导入";
+            this.btnExport.UseVisualStyleBackColor = true;
+            this.btnExport.Click += new System.EventHandler(this.btnExport_Click);
+            // 
+            // btnCard
+            // 
+            this.btnCard.Location = new System.Drawing.Point(14, 435);
+            this.btnCard.Name = "btnCard";
+            this.btnCard.Size = new System.Drawing.Size(75, 23);
+            this.btnCard.TabIndex = 22;
+            this.btnCard.Text = "公司名片";
+            this.btnCard.UseVisualStyleBackColor = true;
+            this.btnCard.Click += new System.EventHandler(this.btnCard_Click);
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(14, 499);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 21;
+            this.button3.Text = "访问官网";
+            this.button3.UseVisualStyleBackColor = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(114, 499);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(75, 23);
+            this.button4.TabIndex = 20;
+            this.button4.Text = "退出系统";
+            this.button4.UseVisualStyleBackColor = true;
+            // 
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(114, 435);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "系统升级";
+            this.button1.UseVisualStyleBackColor = true;
+            // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
             // 系统ToolStripMenuItem
             // 
@@ -236,115 +366,20 @@ namespace StudentGuanli
             this.帮助ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
             this.帮助ToolStripMenuItem.Text = "帮助";
             // 
-            // splitContainer3
+            // menuStrip1
             // 
-            this.splitContainer3.Location = new System.Drawing.Point(0, 0);
-            this.splitContainer3.Name = "splitContainer3";
-            this.splitContainer3.Size = new System.Drawing.Size(150, 100);
-            this.splitContainer3.TabIndex = 0;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(24, 618);
-            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 12);
-            this.label2.TabIndex = 16;
-            this.label2.Text = "版本号：";
-            // 
-            // lblVersion
-            // 
-            this.lblVersion.AutoSize = true;
-            this.lblVersion.Location = new System.Drawing.Point(81, 618);
-            this.lblVersion.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.lblVersion.Name = "lblVersion";
-            this.lblVersion.Size = new System.Drawing.Size(29, 12);
-            this.lblVersion.TabIndex = 17;
-            this.lblVersion.Text = "版本";
-            // 
-            // splitContainer1
-            // 
-            this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 25);
-            this.splitContainer1.Name = "splitContainer1";
-            // 
-            // splitContainer1.Panel1
-            // 
-            this.splitContainer1.Panel1.Controls.Add(this.btnCard);
-            this.splitContainer1.Panel1.Controls.Add(this.button3);
-            this.splitContainer1.Panel1.Controls.Add(this.button4);
-            this.splitContainer1.Panel1.Controls.Add(this.button1);
-            this.splitContainer1.Panel1.Controls.Add(this.button2);
-            this.splitContainer1.Panel1.Controls.Add(this.monthCalendar1);
-            this.splitContainer1.Panel1.Controls.Add(this.lblVersion);
-            this.splitContainer1.Panel1.Controls.Add(this.btnAddStudent);
-            this.splitContainer1.Panel1.Controls.Add(this.label2);
-            this.splitContainer1.Panel1.Controls.Add(this.btnStudentManage);
-            this.splitContainer1.Panel1.Controls.Add(this.label1);
-            this.splitContainer1.Panel1.Controls.Add(this.lblCurretUser);
-            this.splitContainer1.Panel1.Controls.Add(this.btnChangePassword);
-            this.splitContainer1.Panel1.Controls.Add(this.btnScoreAnalyse);
-            this.splitContainer1.Panel1.Controls.Add(this.btnAccountSwitch);
-            this.splitContainer1.Panel1.Controls.Add(this.btnAttendanceManage);
-            this.splitContainer1.Panel1.Controls.Add(this.btnAttendanceCheck);
-            this.splitContainer1.Panel1.Controls.Add(this.btnScoreBrowse);
-            this.splitContainer1.Size = new System.Drawing.Size(1320, 695);
-            this.splitContainer1.SplitterDistance = 289;
-            this.splitContainer1.SplitterWidth = 10;
-            this.splitContainer1.TabIndex = 18;
-            // 
-            // btnCard
-            // 
-            this.btnCard.Location = new System.Drawing.Point(14, 435);
-            this.btnCard.Name = "btnCard";
-            this.btnCard.Size = new System.Drawing.Size(75, 23);
-            this.btnCard.TabIndex = 22;
-            this.btnCard.Text = "公司名片";
-            this.btnCard.UseVisualStyleBackColor = true;
-            this.btnCard.Click += new System.EventHandler(this.btnCard_Click);
-            // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(14, 498);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 21;
-            this.button3.Text = "访问官网";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // button4
-            // 
-            this.button4.Location = new System.Drawing.Point(114, 498);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(75, 23);
-            this.button4.TabIndex = 20;
-            this.button4.Text = "退出系统";
-            this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(14, 391);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 19;
-            this.button1.Text = "系统升级";
-            this.button1.UseVisualStyleBackColor = true;
-            // 
-            // button2
-            // 
-            this.button2.Location = new System.Drawing.Point(114, 391);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 18;
-            this.button2.Text = "批量导入";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // contextMenuStrip1
-            // 
-            this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.系统ToolStripMenuItem,
+            this.学员管理ToolStripMenuItem,
+            this.成绩管理ToolStripMenuItem,
+            this.考勤管理ToolStripMenuItem,
+            this.帮助ToolStripMenuItem});
+            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
+            this.menuStrip1.Name = "menuStrip1";
+            this.menuStrip1.Size = new System.Drawing.Size(1320, 25);
+            this.menuStrip1.TabIndex = 11;
+            this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // FrmDemo
             // 
@@ -358,14 +393,14 @@ namespace StudentGuanli
             this.Text = "测试前台代码和后台代码分离";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.FrmDemo_FormClosing);
             this.Load += new System.EventHandler(this.FrmDemo_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer3)).EndInit();
             this.splitContainer3.ResumeLayout(false);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
+            this.menuStrip1.ResumeLayout(false);
+            this.menuStrip1.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -383,7 +418,6 @@ namespace StudentGuanli
         private System.Windows.Forms.Button btnAttendanceCheck;
         private System.Windows.Forms.Button btnChangePassword;
         private System.Windows.Forms.Button btnAccountSwitch;
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.SplitContainer splitContainer3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label lblVersion;
@@ -391,7 +425,12 @@ namespace StudentGuanli
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button btnCard;
+        private System.Windows.Forms.Button btnExport;
+        private System.Windows.Forms.Button btnScoreReport;
+        private System.IO.Ports.SerialPort serialPort1;
+        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.Button btnEquiConfig;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 系统ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 学员管理ToolStripMenuItem;
@@ -400,7 +439,7 @@ namespace StudentGuanli
         private System.Windows.Forms.ToolStripMenuItem 成绩管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 考勤管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 帮助ToolStripMenuItem;
-        private System.Windows.Forms.Button btnCard;
+        private System.Windows.Forms.MenuStrip menuStrip1;
     }
 }
 

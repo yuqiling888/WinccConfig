@@ -22,6 +22,8 @@ namespace StudentGuanli
         public FrmUserLogin()
         {
             InitializeComponent();
+
+            //
         }
 
             

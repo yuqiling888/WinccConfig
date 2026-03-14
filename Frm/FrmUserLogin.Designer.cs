@@ -35,6 +35,7 @@ namespace StudentGuanli
             this.txtLoginPwd = new System.Windows.Forms.TextBox();
             this.btnLogin = new System.Windows.Forms.Button();
             this.btnClose = new System.Windows.Forms.Button();
+            this.RememberPwd = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // txtLoginId
@@ -77,7 +78,7 @@ namespace StudentGuanli
             // 
             // btnLogin
             // 
-            this.btnLogin.Location = new System.Drawing.Point(215, 271);
+            this.btnLogin.Location = new System.Drawing.Point(288, 268);
             this.btnLogin.Name = "btnLogin";
             this.btnLogin.Size = new System.Drawing.Size(75, 23);
             this.btnLogin.TabIndex = 4;
@@ -87,7 +88,7 @@ namespace StudentGuanli
             // 
             // btnClose
             // 
-            this.btnClose.Location = new System.Drawing.Point(345, 271);
+            this.btnClose.Location = new System.Drawing.Point(369, 268);
             this.btnClose.Name = "btnClose";
             this.btnClose.Size = new System.Drawing.Size(75, 23);
             this.btnClose.TabIndex = 5;
@@ -95,11 +96,22 @@ namespace StudentGuanli
             this.btnClose.UseVisualStyleBackColor = true;
             this.btnClose.Click += new System.EventHandler(this.btnClose_Click);
             // 
+            // RememberPwd
+            // 
+            this.RememberPwd.AutoSize = true;
+            this.RememberPwd.Location = new System.Drawing.Point(210, 275);
+            this.RememberPwd.Name = "RememberPwd";
+            this.RememberPwd.Size = new System.Drawing.Size(72, 16);
+            this.RememberPwd.TabIndex = 6;
+            this.RememberPwd.Text = "记住密码";
+            this.RememberPwd.UseVisualStyleBackColor = true;
+            // 
             // FrmUserLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.RememberPwd);
             this.Controls.Add(this.btnClose);
             this.Controls.Add(this.btnLogin);
             this.Controls.Add(this.label2);
@@ -121,5 +133,6 @@ namespace StudentGuanli
         private System.Windows.Forms.TextBox txtLoginPwd;
         private System.Windows.Forms.Button btnLogin;
         private System.Windows.Forms.Button btnClose;
+        private System.Windows.Forms.CheckBox RememberPwd;
     }
 }

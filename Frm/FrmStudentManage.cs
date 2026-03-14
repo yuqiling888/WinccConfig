@@ -258,5 +258,10 @@ namespace StudentGuanli
             this.objStudeList.Sort(new StudntIdDESC());
             this.dgvStudentList.Refresh();
         }
+
+        private void dgvStudentList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

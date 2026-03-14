@@ -104,8 +104,8 @@ namespace StudentGuanli
                 ClassId = Convert.ToInt32(this.cboClassName.SelectedValue),
                 //ClassName = this.cboClassName.Text,
                 CardNo = this.textBoxCardNo.Text.Trim(),
-                StuImage = this.pbStu.Image!=null?
-                new Common.SerializeObjectToString().SerializeOboject(this.pbStu.Image):"",
+                //StuImage = this.pbStu.Image!=null?
+             //   new Common.SerializeObjectToString().SerializeOboject(this.pbStu.Image):"",
 
 
             };

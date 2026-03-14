@@ -1,5 +1,5 @@
 ﻿
-namespace StudentGuanli.Frm
+namespace StudentGuanli
 {
     partial class FrmNPOI
     {
@@ -29,59 +29,58 @@ namespace StudentGuanli.Frm
         /// </summary>
         private void InitializeComponent()
         {
-            this.dgvProductList1 = new System.Windows.Forms.DataGridView();
+            this.dgvStudentList1 = new System.Windows.Forms.DataGridView();
             this.StudentId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Gender = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Age = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Birthday = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.ClassName = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.ClassId = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.CardNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentIdNo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PhoneNumber = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.StudentAddress = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.btnExportExcel = new System.Windows.Forms.Button();
-            this.dgvProductList2 = new System.Windows.Forms.DataGridView();
+            this.dgvStudentList2 = new System.Windows.Forms.DataGridView();
+            this.btnExcelImport = new System.Windows.Forms.Button();
+            this.cboClassName1 = new System.Windows.Forms.ComboBox();
+            this.buttonSubmitQuery = new System.Windows.Forms.Button();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn8 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn9 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn10 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn11 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.btnExcelImport = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList2)).BeginInit();
             this.SuspendLayout();
             // 
-            // dgvProductList1
+            // dgvStudentList1
             // 
-            this.dgvProductList1.AllowUserToAddRows = false;
-            this.dgvProductList1.AllowUserToDeleteRows = false;
-            this.dgvProductList1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductList1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvStudentList1.AllowUserToAddRows = false;
+            this.dgvStudentList1.AllowUserToDeleteRows = false;
+            this.dgvStudentList1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudentList1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.StudentId,
             this.StudentName,
             this.Gender,
             this.Age,
             this.Birthday,
-            this.ClassName,
             this.ClassId,
             this.CardNo,
             this.StudentIdNo,
             this.PhoneNumber,
             this.StudentAddress});
-            this.dgvProductList1.Location = new System.Drawing.Point(37, 55);
-            this.dgvProductList1.Name = "dgvProductList1";
-            this.dgvProductList1.ReadOnly = true;
-            this.dgvProductList1.RowTemplate.Height = 23;
-            this.dgvProductList1.Size = new System.Drawing.Size(1177, 307);
-            this.dgvProductList1.TabIndex = 29;
+            this.dgvStudentList1.Location = new System.Drawing.Point(37, 55);
+            this.dgvStudentList1.Name = "dgvStudentList1";
+            this.dgvStudentList1.ReadOnly = true;
+            this.dgvStudentList1.RowTemplate.Height = 23;
+            this.dgvStudentList1.Size = new System.Drawing.Size(1177, 307);
+            this.dgvStudentList1.TabIndex = 29;
             // 
             // StudentId
             // 
@@ -122,13 +121,6 @@ namespace StudentGuanli.Frm
             this.Birthday.HeaderText = "出生日期";
             this.Birthday.Name = "Birthday";
             this.Birthday.ReadOnly = true;
-            // 
-            // ClassName
-            // 
-            this.ClassName.DataPropertyName = "ClassName";
-            this.ClassName.HeaderText = "班级名称";
-            this.ClassName.Name = "ClassName";
-            this.ClassName.ReadOnly = true;
             // 
             // ClassId
             // 
@@ -177,29 +169,59 @@ namespace StudentGuanli.Frm
             this.btnExportExcel.UseVisualStyleBackColor = true;
             this.btnExportExcel.Click += new System.EventHandler(this.btnExportExcel_Click);
             // 
-            // dgvProductList2
+            // dgvStudentList2
             // 
-            this.dgvProductList2.AllowUserToAddRows = false;
-            this.dgvProductList2.AllowUserToDeleteRows = false;
-            this.dgvProductList2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvProductList2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dgvStudentList2.AllowUserToAddRows = false;
+            this.dgvStudentList2.AllowUserToDeleteRows = false;
+            this.dgvStudentList2.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvStudentList2.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn3,
             this.dataGridViewTextBoxColumn4,
             this.dataGridViewTextBoxColumn5,
-            this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7,
             this.dataGridViewTextBoxColumn8,
             this.dataGridViewTextBoxColumn9,
             this.dataGridViewTextBoxColumn10,
             this.dataGridViewTextBoxColumn11});
-            this.dgvProductList2.Location = new System.Drawing.Point(37, 443);
-            this.dgvProductList2.Name = "dgvProductList2";
-            this.dgvProductList2.ReadOnly = true;
-            this.dgvProductList2.RowTemplate.Height = 23;
-            this.dgvProductList2.Size = new System.Drawing.Size(1177, 307);
-            this.dgvProductList2.TabIndex = 31;
+            this.dgvStudentList2.Location = new System.Drawing.Point(37, 443);
+            this.dgvStudentList2.Name = "dgvStudentList2";
+            this.dgvStudentList2.ReadOnly = true;
+            this.dgvStudentList2.RowTemplate.Height = 23;
+            this.dgvStudentList2.Size = new System.Drawing.Size(1177, 307);
+            this.dgvStudentList2.TabIndex = 31;
+            // 
+            // btnExcelImport
+            // 
+            this.btnExcelImport.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnExcelImport.Location = new System.Drawing.Point(1045, 391);
+            this.btnExcelImport.Name = "btnExcelImport";
+            this.btnExcelImport.Size = new System.Drawing.Size(150, 46);
+            this.btnExcelImport.TabIndex = 32;
+            this.btnExcelImport.Text = "Excel文件导入";
+            this.btnExcelImport.UseVisualStyleBackColor = true;
+            this.btnExcelImport.Click += new System.EventHandler(this.btnExcelImport_Click);
+            // 
+            // cboClassName1
+            // 
+            this.cboClassName1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cboClassName1.FormattingEnabled = true;
+            this.cboClassName1.Location = new System.Drawing.Point(150, 19);
+            this.cboClassName1.Name = "cboClassName1";
+            this.cboClassName1.Size = new System.Drawing.Size(179, 20);
+            this.cboClassName1.TabIndex = 33;
+            // 
+            // buttonSubmitQuery
+            // 
+            this.buttonSubmitQuery.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.buttonSubmitQuery.Location = new System.Drawing.Point(915, 12);
+            this.buttonSubmitQuery.Name = "buttonSubmitQuery";
+            this.buttonSubmitQuery.Size = new System.Drawing.Size(89, 23);
+            this.buttonSubmitQuery.TabIndex = 34;
+            this.buttonSubmitQuery.Text = "提交查询";
+            this.buttonSubmitQuery.UseVisualStyleBackColor = true;
+            this.buttonSubmitQuery.Click += new System.EventHandler(this.buttonSubmitQuery_Click);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -241,13 +263,6 @@ namespace StudentGuanli.Frm
             this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
             this.dataGridViewTextBoxColumn5.ReadOnly = true;
             // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "ClassName";
-            this.dataGridViewTextBoxColumn6.HeaderText = "班级名称";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
             // dataGridViewTextBoxColumn7
             // 
             this.dataGridViewTextBoxColumn7.DataPropertyName = "ClassId";
@@ -284,61 +299,53 @@ namespace StudentGuanli.Frm
             this.dataGridViewTextBoxColumn11.Name = "dataGridViewTextBoxColumn11";
             this.dataGridViewTextBoxColumn11.ReadOnly = true;
             // 
-            // btnExcelImport
-            // 
-            this.btnExcelImport.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.btnExcelImport.Location = new System.Drawing.Point(1045, 391);
-            this.btnExcelImport.Name = "btnExcelImport";
-            this.btnExcelImport.Size = new System.Drawing.Size(150, 46);
-            this.btnExcelImport.TabIndex = 32;
-            this.btnExcelImport.Text = "导出到Excel文件";
-            this.btnExcelImport.UseVisualStyleBackColor = true;
-            // 
             // FrmNPOI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1319, 789);
+            this.Controls.Add(this.buttonSubmitQuery);
+            this.Controls.Add(this.cboClassName1);
             this.Controls.Add(this.btnExcelImport);
-            this.Controls.Add(this.dgvProductList2);
+            this.Controls.Add(this.dgvStudentList2);
             this.Controls.Add(this.btnExportExcel);
-            this.Controls.Add(this.dgvProductList1);
+            this.Controls.Add(this.dgvStudentList1);
             this.Name = "FrmNPOI";
             this.Text = "FrmNPOI";
             this.Load += new System.EventHandler(this.FrmNPOI_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProductList2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvStudentList2)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.DataGridView dgvProductList1;
+        private System.Windows.Forms.DataGridView dgvStudentList1;
+        private System.Windows.Forms.Button btnExportExcel;
+        private System.Windows.Forms.DataGridView dgvStudentList2;
+        private System.Windows.Forms.Button btnExcelImport;
+        private System.Windows.Forms.ComboBox cboClassName1;
+        private System.Windows.Forms.Button buttonSubmitQuery;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentId;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentName;
         private System.Windows.Forms.DataGridViewTextBoxColumn Gender;
         private System.Windows.Forms.DataGridViewTextBoxColumn Age;
         private System.Windows.Forms.DataGridViewTextBoxColumn Birthday;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ClassName;
         private System.Windows.Forms.DataGridViewTextBoxColumn ClassId;
         private System.Windows.Forms.DataGridViewTextBoxColumn CardNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentIdNo;
         private System.Windows.Forms.DataGridViewTextBoxColumn PhoneNumber;
         private System.Windows.Forms.DataGridViewTextBoxColumn StudentAddress;
-        private System.Windows.Forms.Button btnExportExcel;
-        private System.Windows.Forms.DataGridView dgvProductList2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn8;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn9;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn10;
         private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn11;
-        private System.Windows.Forms.Button btnExcelImport;
     }
 }

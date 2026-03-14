@@ -35,9 +35,9 @@ namespace StudentGuanli
             else this.rdoFeMale.Checked = true;
 
             //显示照片
-            if (objStudent.StuImage != null)
-                this.pbStu.Image = (Image)new Common.SerializeObjectToString().DeserializeToObject(objStudent.StuImage);
-            else
+            //if (objStudent.StuImage != null)
+            //    this.pbStu.Image = (Image)new Common.SerializeObjectToString().DeserializeToObject(objStudent.StuImage);
+            //else
                 this.pbStu.Image= Image.FromFile("default.png");
         }
 
